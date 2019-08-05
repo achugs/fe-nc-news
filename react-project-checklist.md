@@ -12,9 +12,9 @@ Here's a guide to approaching any React project. It's not an absolutely strict s
 
 ~~Name your components~~
 
-Draw component hierarchy
+~~Draw component hierarchy~~
 
-Plan routing
+~~Plan routing~~
 
 Label where you will require functions that change state
 
