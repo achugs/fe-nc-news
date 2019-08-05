@@ -8,9 +8,9 @@ Here's a guide to approaching any React project. It's not an absolutely strict s
 
 ~~Draw main views of app~~
 
-Break out components from your views
+~~Break out components from your views~~
 
-Name your components
+~~Name your components~~
 
 Draw component hierarchy
 
