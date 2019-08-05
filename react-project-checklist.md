@@ -50,7 +50,7 @@ Add expected propTypes (adapt this as necessary)
 
 # Dynamic (order may be a bit looser here!)
 
-Create .api file
+~~Create .api file~~
 
 Construct componentDidMount functions
 
