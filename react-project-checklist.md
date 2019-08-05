@@ -2,7 +2,7 @@
 Here's a guide to approaching any React project. It's not an absolutely strict set of rules, but you can use it to help you avoid getting distracted by things that are likely to be a waste of time if done too early.
 
 # Planning
-### Copy this list into your project
+### ~~Copy this list into your project~~
 
 Outline functionality of your app
 
