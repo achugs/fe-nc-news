@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './components/EveryPageComponents/Header'
 import './App.css';
+import Header from './components/EveryPageComponents/Header'
 import NavBar from './components/EveryPageComponents/NavBar'
 import { Router } from "@reach/router"
-import Home from './components/ArticleComponents/Home';
+import Home from './components/ArticleComponents/Home'
 import Articles from './components/ArticleComponents/Articles'
 // import Topics from './components/Topics';
 
@@ -13,11 +13,11 @@ function App() {
     <div className="App">
       <Header />
       <NavBar />
-      <Router>
+      {<Router>
         < Home path="/" />
         < Articles path="/articles" />
-        {/* < Topics path="/topics" /> */}
-      </Router>
+
+      </Router>}
 
     </div>
   );

@@ -1,4 +1,4 @@
-import React from './node_modules/react';
+import React from 'react';
 
 const Header = () => {
   return (
@@ -6,7 +6,7 @@ const Header = () => {
       <h1 className='header'>
         NC Hughes News
       </h1>
-      <p>user login info</p>
+      <p>user (cannot delete comments not by this author)</p>
     </div>
   );
 }
