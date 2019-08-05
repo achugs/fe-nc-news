@@ -22,7 +22,7 @@ Label where you will require data
 
 Determine from this where you will require state & hold functions
 
-# Setup
+# ~~Setup~~
 
 ~~ Create your app directory (e.g. with create-react-app)~~
 
