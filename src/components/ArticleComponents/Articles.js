@@ -4,14 +4,16 @@ import * as api from '../../API/api';
 
 class Articles extends Component {
   state = {
-    articles: []
+    articles: [],
+    isLoading: true
   }
   render() {
     return (
 
       <div>
         <h2>Articles</h2>
-        <ArticleList articles={this.state.articles} />
+        {!this.state.isLoading && <ArticleList articles={this.state.articles} />}
+
       </div>
     );
   }
@@ -21,7 +23,7 @@ class Articles extends Component {
 
   fetchArticleData = () => {
     api.getArticles().then((articles) => {
-      this.setState({ articles })
+      this.setState({ articles, isLoading: false })
     })
 
   }
