@@ -4,9 +4,9 @@ Here's a guide to approaching any React project. It's not an absolutely strict s
 # Planning
 ### ~~Copy this list into your project~~
 
-Outline functionality of your app
+~~Outline functionality of your app~~
 
-Draw main views of app
+~~Draw main views of app~~
 
 Break out components from your views
 
