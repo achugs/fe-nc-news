@@ -24,13 +24,13 @@ Determine from this where you will require state & hold functions
 
 # ~~Setup~~
 
-~~ Create your app directory (e.g. with create-react-app)~~
+~~Create your app directory (e.g. with create-react-app~~
 
-~~ Run your app ~~
+~~Run your app~~
 
-~~ Git init (unless cloned!), gitignore config, make an initial commit ~~
+~~Git init (unless cloned!), gitignore config, make an initial commit~~
 
-~~ Ensure you have React DevTools running ~~
+~~Ensure you have React DevTools running~~
 
 # Static
 
