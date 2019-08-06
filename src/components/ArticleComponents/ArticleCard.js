@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as api from '../../API/api';
 import ErrorHandlingDisplay from '../../ErrorHandlingDisplay'
+import { Link } from "@reach/router"
 
 class ArticleCard extends Component {
 
@@ -23,7 +24,8 @@ class ArticleCard extends Component {
             <p>Posted by: {article.author}</p>
             <p>Created: {article.created_at.slice(0, 16)}</p>
             <p>Vote: {article.votes}</p>
-            <p>Comments: {article.comment_count}</p>
+            <Link to={`/articles/${article.articles_id}/comments`}><p>Comments: {article.comment_count}</p></Link>
+
           </div>}
 
 

@@ -7,6 +7,7 @@ import Home from './components/ArticleComponents/Home'
 import Articles from './components/ArticleComponents/Articles'
 import ArticleCard from './components/ArticleComponents/ArticleCard'
 import ErrorHandlingDisplay from './ErrorHandlingDisplay';
+import ArticleComments from './components/ArticleComponents/ArticleComments';
 // import Topics from './components/Topics';
 
 
@@ -20,6 +21,7 @@ function App() {
         < Articles path="/articles" />
         <ArticleCard path="/articles/:id" />
         <ErrorHandlingDisplay default status='404' msg='page not found' />
+        <ArticleComments path="/articles/:id/comments" />
 
       </Router>}
 

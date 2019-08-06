@@ -13,3 +13,8 @@ export const getArticleCard = async (article_id) => {
   const { data } = await request.get(`/articles/${article_id}`)
   return data.article;
 }
+
+export const getArticleComments = async (article_id) => {
+  const { data } = await request.get(`/articles/${article_id}/comments`)
+  return data.comments
+}
