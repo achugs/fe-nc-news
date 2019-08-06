@@ -18,7 +18,7 @@ class ArticleCard extends Component {
             <h2>{article.title}</h2>
             <p>{article.body}</p>
             <p>Posted by: {article.author}</p>
-            <p>Time: {article.created_at}</p>
+            <p>Created: {article.created_at.slice(0, 16)}</p>
             <p>Vote: {article.votes}</p>
             <p>Comments: {article.comment_count}</p>
           </div>}
