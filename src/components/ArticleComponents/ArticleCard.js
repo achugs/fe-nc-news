@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as api from '../../API/api';
+import ErrorHandlingDisplay from '../../ErrorHandlingDisplay'
 
 class ArticleCard extends Component {
 
@@ -11,7 +12,7 @@ class ArticleCard extends Component {
   render() {
     console.log(this.state)
     const { article, isLoading, error } = this.state;
-    if (error) return <p>ERROR {error.status} {error.msg}</p>
+    if (error) return <ErrorHandlingDisplay {...error} />
     return (
       <div>
 
