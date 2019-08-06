@@ -12,7 +12,8 @@ class Articles extends Component {
 
       <div>
         <h2>Articles</h2>
-        {!this.state.isLoading && <ArticleList articles={this.state.articles} />}
+
+        {this.state.isLoading ? <h3>is Loading</h3> : <ArticleList articles={this.state.articles} />}
 
       </div>
     );
