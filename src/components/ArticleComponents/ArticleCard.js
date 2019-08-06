@@ -5,11 +5,13 @@ class ArticleCard extends Component {
 
   state = {
     article: null,
-    isLoading: true
+    isLoading: true,
+    error: null
   }
   render() {
     console.log(this.state)
-    const { article, isLoading } = this.state;
+    const { article, isLoading, error } = this.state;
+    if (error) return <p>ERROR {error.status} {error.msg}</p>
     return (
       <div>
 
@@ -32,7 +34,10 @@ class ArticleCard extends Component {
   }
   fetchArticleCard = () => {
     console.log(this.props)
-    api.getArticleCard(this.props.id).then((article) => { this.setState({ article, isLoading: false }) })
+    api.getArticleCard(this.props.id).then((article) => { this.setState({ article, isLoading: false }) }).catch((err) => {
+      console.dir(err)
+      this.setState({ error: { msg: err.response.data.msg, status: err.response.status }, isLoading: false })
+    })
   }
 }
 

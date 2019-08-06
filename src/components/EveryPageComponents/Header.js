@@ -10,7 +10,7 @@ class Header extends Component {
         <h1 className='header'>
           NC Hughes News
       </h1>
-        <p>Logged in as: {this.state.user}</p>
+        <p className='user'>User: {this.state.user}</p>
       </div>
     );
   }
