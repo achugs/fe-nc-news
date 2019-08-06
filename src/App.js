@@ -5,6 +5,7 @@ import NavBar from './components/EveryPageComponents/NavBar'
 import { Router } from "@reach/router"
 import Home from './components/ArticleComponents/Home'
 import Articles from './components/ArticleComponents/Articles'
+import ArticleCard from './components/ArticleComponents/ArticleCard'
 // import Topics from './components/Topics';
 
 
@@ -16,6 +17,7 @@ function App() {
       {<Router>
         < Home path="/" />
         < Articles path="/articles" />
+        <ArticleCard path="/articles/:id" />
 
       </Router>}
 

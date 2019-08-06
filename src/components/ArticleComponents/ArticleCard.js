@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 
+class ArticleCard extends Component {
+  render() {
+    return (
+      <div>
+        i'm here
+      </div>
+    );
+  }
+}
 
-const ArticleCard = (props) => {
-  return (
-    <div>
-      {/* <ul>
+export default ArticleCard;
+
+{/* <ul>
         {props.articles.map(article => {
           return (
             <li key={article.article_id} >
@@ -21,9 +29,3 @@ const ArticleCard = (props) => {
         )
         }
       </ul> */}
-
-    </div>
-  );
-}
-
-export default ArticleCard;
