@@ -24,7 +24,7 @@ class ArticleCard extends Component {
             <p>Posted by: {article.author}</p>
             <p>Created: {article.created_at.slice(0, 16)}</p>
             <p>Vote: {article.votes}</p>
-            <Link to={`/articles/${article.articles_id}/comments`}><p>Comments: {article.comment_count}</p></Link>
+            <Link to={`/articles/${article.article_id}/comments`}><p>Comments: {article.comment_count}</p></Link>
 
           </div>}
 
