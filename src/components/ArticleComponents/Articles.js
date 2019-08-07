@@ -3,6 +3,7 @@ import ArticleList from './ArticleList';
 import * as api from '../../API/api';
 import SortArticles from './SortArticles';
 import Loading from '../../Loading';
+import styles from './Articles.module.css';
 
 
 
@@ -15,7 +16,7 @@ class Articles extends Component {
     return (
 
       <div>
-        <h2>Articles</h2>
+        <h2 className={styles.articlesTitle}>Articles</h2>
         <SortArticles fetchArticleData={this.fetchArticleData} />
 
         {this.state.isLoading ? <Loading /> : <ArticleList articles={this.state.articles} />}

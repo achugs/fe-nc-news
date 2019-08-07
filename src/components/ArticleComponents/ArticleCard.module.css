@@ -1,0 +1,15 @@
+.articleCard{
+  border: 1px solid aqua;
+}
+
+.articleCardTitle{
+   border: 1px solid red;
+}
+
+.articleCardCommentCount{
+   border: 1px solid red;
+}
+
+.articleCardBody{
+  border: 1px solid red;
+}

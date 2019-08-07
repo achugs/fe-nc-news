@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './Header.module.css';
 
 class Header extends Component {
   state = {
@@ -6,12 +7,12 @@ class Header extends Component {
   }
   render() {
     return (
-      <div>
-        <h1 className='header'>
+      <header className={styles.header}>
+        <h1 className={styles.headerTitle}>
           NC Hughes News
       </h1>
-        <p className='user'>User: {this.state.user}</p>
-      </div>
+        <p className={styles.userLogin}>User: {this.state.user}</p>
+      </header>
     );
   }
 }

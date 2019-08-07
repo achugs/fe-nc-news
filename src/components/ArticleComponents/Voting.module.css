@@ -1,0 +1,14 @@
+.votingBody{
+  border: 1px solid red;
+}
+.votesTally{
+   border: 1px solid red;
+}
+
+.votesLove{
+  border: 1px solid red;
+}
+
+.votesHate{
+  border: 1px solid red;
+}

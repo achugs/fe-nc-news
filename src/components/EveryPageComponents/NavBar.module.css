@@ -1,0 +1,21 @@
+.navBar{
+  padding: 1em;
+  margin:0;
+  border: 1px solid fuchsia;
+}
+
+.homeLink{
+  border: 1px solid red;
+}
+
+.footballLink{
+  border: 1px solid red;
+}
+
+.codingLink{
+  border: 1px solid red;
+}
+
+.cookingLink{
+  border: 1px solid red;
+}

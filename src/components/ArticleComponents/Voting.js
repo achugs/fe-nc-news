@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as api from '../../API/api';
+import styles from './Voting.module.css';
 
 class Voting extends Component {
 
@@ -10,10 +11,10 @@ class Voting extends Component {
     const { votes } = this.props;
     const { voteInc } = this.state;
     return (
-      <div>
-        <button onClick={() => { this.voteUpdate(+1) }} disabled={voteInc >= 1}><span role='img' aria-label="love"> Love it: ❤️</span></button>
-        <p>Votes: {votes + voteInc}</p>
-        <button onClick={() => { this.voteUpdate(-1) }} disabled={voteInc < 0}><span role='img' aria-label="hate">Hate it: 💔</span></button>
+      <div className={styles.votingBody}>
+        <button className={styles.votesLove} onClick={() => { this.voteUpdate(+1) }} disabled={voteInc >= 1}><span role='img' aria-label="love"> ❤️</span></button>
+        <p className={styles.votesTally}>Votes: {votes + voteInc}</p>
+        <button className={styles.votesHate} onClick={() => { this.voteUpdate(-1) }} disabled={voteInc < 0}><span role='img' aria-label="hate"> 💔</span></button>
       </div >
     );
   }

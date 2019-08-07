@@ -4,6 +4,7 @@ import ErrorHandlingDisplay from '../../ErrorHandlingDisplay'
 import { Link } from "@reach/router"
 import Loading from '../../Loading';
 import Voting from './Voting';
+import styles from './ArticleCard.module.css';
 
 class ArticleCard extends Component {
 
@@ -21,13 +22,13 @@ class ArticleCard extends Component {
       <div>
 
         {isLoading ? <Loading /> :
-          <div>
-            <h2>{article.title}</h2>
-            <p>{article.body}</p>
+          <div className={styles.articleCard}>
+            <h2 className={styles.articleCardTitle}>{article.title}</h2>
+            <p className={styles.articleCardBody}>{article.body}</p>
             <p>Posted by: {article.author}</p>
             <p>Created: {article.created_at.slice(0, 16)}</p>
             <Voting article_id={id} votes={article.votes} />
-            <Link to={`/articles/${article.article_id}/comments`}><p>Comments: {article.comment_count}</p></Link>
+            <Link to={`/articles/${article.article_id}/comments`} ><p className={styles.articleCardCommentCount}>Comments: {article.comment_count}</p></Link>
 
           </div>}
 
