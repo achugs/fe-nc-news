@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import * as api from '../../API/api';
 import ErrorHandlingDisplay from '../../ErrorHandlingDisplay'
 import { Link } from "@reach/router"
+import Loading from '../../Loading';
 
 class ArticleCard extends Component {
 
@@ -17,7 +18,7 @@ class ArticleCard extends Component {
     return (
       <div>
 
-        {isLoading ? <p>Loading</p> :
+        {isLoading ? <Loading /> :
           <div>
             <h2>{article.title}</h2>
             <p>{article.body}</p>

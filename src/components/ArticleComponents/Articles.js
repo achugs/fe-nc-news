@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ArticleList from './ArticleList';
 import * as api from '../../API/api';
 import SortArticles from './SortArticles';
+import Loading from '../../Loading';
+
 
 
 class Articles extends Component {
@@ -16,7 +18,7 @@ class Articles extends Component {
         <h2>Articles</h2>
         <SortArticles fetchArticleData={this.fetchArticleData} />
 
-        {this.state.isLoading ? <h3>is Loading</h3> : <ArticleList articles={this.state.articles} />}
+        {this.state.isLoading ? <Loading /> : <ArticleList articles={this.state.articles} />}
 
       </div>
     );
