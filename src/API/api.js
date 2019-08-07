@@ -19,3 +19,7 @@ export const getCommentsData = async (article_id) => {
   return data.comments
 }
 
+export const patchVoteIncrement = async (article_id, inc_votes) => {
+  const { data } = await request.patch(`/articles/${article_id}`, { inc_votes })
+  return data.article;
+}

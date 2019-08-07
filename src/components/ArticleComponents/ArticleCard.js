@@ -3,7 +3,7 @@ import * as api from '../../API/api';
 import ErrorHandlingDisplay from '../../ErrorHandlingDisplay'
 import { Link } from "@reach/router"
 import Loading from '../../Loading';
-import Voting from '../Voting';
+import Voting from './Voting';
 
 class ArticleCard extends Component {
 

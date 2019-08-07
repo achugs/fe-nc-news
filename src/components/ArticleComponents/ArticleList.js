@@ -13,7 +13,7 @@ const ArticleList = (props) => {
             <p>{article.body}</p>
             <p>Posted by: {article.author}</p>
             <p>Time: {article.created_at.slice(0, 16)}</p>
-            <p>Vote: {article.votes}</p>
+            <p>Votes: {article.votes}</p>
             <p>Comments: {article.comment_count}</p>
           </li>
         )
