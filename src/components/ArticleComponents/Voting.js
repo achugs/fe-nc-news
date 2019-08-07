@@ -13,7 +13,7 @@ class Voting extends Component {
       <div>
         <button onClick={() => { this.voteUpdate(+1) }} disabled={voteInc >= 1}><span role='img' aria-label="love"> Love it: ❤️</span></button>
         <p>Votes: {votes + voteInc}</p>
-        <button onClick={() => { this.voteUpdate(-1) }} disabled={voteInc < 1}><span role='img' aria-label="hate">Hate it: 💔</span></button>
+        <button onClick={() => { this.voteUpdate(-1) }} disabled={voteInc < 0}><span role='img' aria-label="hate">Hate it: 💔</span></button>
       </div >
     );
   }
