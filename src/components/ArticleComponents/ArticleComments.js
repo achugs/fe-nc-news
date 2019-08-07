@@ -3,13 +3,21 @@ import React, { Component } from 'react';
 
 
 class ArticleComments extends Component {
-
+  state = {
+    comments: null
+  }
   render() {
     return (
       <div>
         <p>here</p>
       </div>
     );
+  }
+  componentDidMount() {
+    this.fetchCommentData()
+  }
+  fetchCommentData = () => {
+
   }
 }
 
