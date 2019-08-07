@@ -10,6 +10,7 @@ const ArticleList = (props) => {
         return (
           <li key={article.title}  >
             <Link to={`/articles/${article.article_id}`}><h4 >{article.title}</h4></Link>
+            <p>Topic : {article.topic}</p>
             <p>Posted by: {article.author}</p>
             <p>Time: {article.created_at.slice(0, 16)}</p>
             <p>Votes: {article.votes}</p>

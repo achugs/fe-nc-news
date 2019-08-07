@@ -25,16 +25,24 @@ class Articles extends Component {
     );
   }
   componentDidMount = () => {
-    this.fetchArticleData()
+    if (this.props.topic) {
+      this.fetchArticleData({ topic: this.props.topic })
+    }
+    else this.fetchArticleData()
   }
 
-  fetchArticleData = (query) => {
+  fetchArticleData = (topic, query) => {
     console.log(query)
-    api.getArticles(query).then((articles) => {
+    api.getArticles(topic, query).then((articles) => {
       this.setState({ articles, isLoading: false })
     })
 
   }
+  componentDidUpdate = (prevProps, prevState) => {
+    if (prevProps !== this.props) {
+      this.fetchArticleData({ topic: this.props.topic });
+    }
+  };
 
 }
 

@@ -24,6 +24,7 @@ class ArticleCard extends Component {
         {isLoading ? <Loading /> :
           <div className={styles.articleCard}>
             <h2 className={styles.articleCardTitle}>{article.title}</h2>
+            <h4>Topic: {article.topic}</h4>
             <p className={styles.articleCardBody}>{article.body}</p>
             <p>Posted by: {article.author}</p>
             <p>Created: {article.created_at.slice(0, 16)}</p>
