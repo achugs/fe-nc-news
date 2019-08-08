@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import * as api from '../../API/api';
 import ErrorHandlingDisplay from '../../ErrorHandlingDisplay'
-import { Link } from "@reach/router"
 import Loading from '../../Loading';
 import Voting from './Voting';
 import styles from './ArticleCard.module.css';
+import ArticleComments from './ArticleComments';
 
 class ArticleCard extends Component {
 
   state = {
-    article: null,
+    article: [],
     isLoading: true,
     error: null
   }
@@ -29,7 +29,8 @@ class ArticleCard extends Component {
             <p>Posted by: {article.author}</p>
             <p>Created: {article.created_at.slice(0, 16)}</p>
             <Voting article_id={id} votes={article.votes} />
-            <Link to={`/articles/${article.article_id}/comments`} ><p className={styles.articleCardCommentCount}>Comments: {article.comment_count}</p></Link>
+            <p className={styles.articleCardCommentCount}>Comments: {article.comment_count}</p>
+            <ArticleComments article_id={article.article_id} />
 
           </div>}
 

@@ -27,7 +27,7 @@ class App extends React.Component {
           < Articles path="/articles" />
           < ArticleCard path="/articles/:id" />
           < ErrorHandlingDisplay default status='404' msg='page not found' />
-          < ArticleComments path="/articles/:id/comments" />
+          < ArticleComments path="/articles/:id" />
           < Articles path="/topics/:topic" />
         </Router >}
 

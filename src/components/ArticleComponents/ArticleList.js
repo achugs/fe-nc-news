@@ -3,6 +3,7 @@ import { Link } from "@reach/router"
 import styles from './ArticleList.module.css';
 
 
+
 const ArticleList = (props) => {
   return (
     <ul className={styles.articlesTitle} >
@@ -16,6 +17,7 @@ const ArticleList = (props) => {
             <p>Time: {article.created_at.slice(0, 16)}</p>
             <p>Votes: {article.votes}</p>
             <p>Comments: {article.comment_count}</p>
+
           </li>
         )
       })}
