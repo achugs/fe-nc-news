@@ -32,12 +32,16 @@ class Articles extends Component {
   fetchArticleData = (query) => {
     console.log(query)
     api.getArticles(query).then((articles) => {
+      console.log({ articles })
+
       this.setState({ articles, isLoading: false })
     })
 
   }
   componentDidUpdate = (prevProps, prevState) => {
+
     if (prevProps !== this.props) {
+      console.log({ topic: this.props.topic.topic })
       this.fetchArticleData({ topic: this.props.topic });
     }
   };

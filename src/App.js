@@ -17,7 +17,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.user)
     const { username } = this.state.user
     return (
       <div className="App" >

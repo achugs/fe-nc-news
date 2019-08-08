@@ -21,6 +21,7 @@ const ArticleList = (props) => {
       })}
     </ul>
   );
+
 };
 
 export default ArticleList;
