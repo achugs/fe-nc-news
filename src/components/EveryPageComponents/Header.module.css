@@ -1,13 +1,23 @@
 .headerTitle{
+  display:flex;
+  justify-content: center;
+  font-size: 175%;
   font-family: 'Press Start 2P', cursive;
   color: #f4f2ec
 }
 
 
 .header{
-    background-color:#0e3746;
-    height: 90px;
-    display: flex;
-    justify-content: center;
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  background-color:#0e3746;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  margin:0;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  padding-left: 2.5%;
   
 }

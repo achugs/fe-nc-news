@@ -1,5 +1,9 @@
 .articlesTitle{
-border: 1px solid red;
-font-family: 'Press Start 2P', cursive;
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  color: #0e3746;
+
 
 }
