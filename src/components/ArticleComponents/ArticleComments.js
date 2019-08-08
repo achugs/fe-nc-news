@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import * as api from '../../API/api';
 import ArticleCommentCard from './ArticleCommentCard';
-import Loading from '../../Loading';
 
 
 class ArticleComments extends Component {
   state = {
-    comments: [],
-    isLoading: true
+    comments: []
   }
 
 
@@ -15,9 +13,10 @@ class ArticleComments extends Component {
     console.log(this.state.comments)
     return (
       <div>
-        <h3>Comments</h3>
-        {this.state.isLoading ? <Loading /> : <ArticleCommentCard comments={this.state.comments} />}
+        <p>here</p>
+
         <ArticleCommentCard comments={this.state.comments} />
+        <p> </p>
       </div>
     );
   }
@@ -27,7 +26,7 @@ class ArticleComments extends Component {
   }
   fetchCommentData = () => {
     console.log(this.props.article_id)
-    api.getCommentsData(this.props.article_id).then((comments) => { this.setState({ comments, isLoading: false }) })
+    api.getCommentsData(this.props.article_id).then((comments) => { this.setState({ comments }) })
   }
 }
 

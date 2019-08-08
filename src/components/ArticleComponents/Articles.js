@@ -38,13 +38,7 @@ class Articles extends Component {
     })
 
   }
-  componentDidUpdate = (prevProps, prevState) => {
 
-    if (prevProps !== this.props) {
-      console.log({ topic: this.props.topic.topic })
-      this.fetchArticleData({ topic: this.props.topic });
-    }
-  };
 
 }
 

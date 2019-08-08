@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import * as api from '../../API/api';
 import ErrorHandlingDisplay from '../../ErrorHandlingDisplay'
+import { Link } from "@reach/router"
 import Loading from '../../Loading';
 import Voting from './Voting';
 import styles from './ArticleCard.module.css';
-import ArticleComments from './ArticleComments';
 
 class ArticleCard extends Component {
 
   state = {
-    article: [],
+    article: null,
     isLoading: true,
     error: null
   }
   render() {
+    console.log(this.state)
     const { article, isLoading, error } = this.state;
     const { id } = this.props;
-    console.log(article.article_id)
     if (error) return <ErrorHandlingDisplay {...error} />
     return (
       <div>
@@ -29,8 +29,7 @@ class ArticleCard extends Component {
             <p>Posted by: {article.author}</p>
             <p>Created: {article.created_at.slice(0, 16)}</p>
             <Voting article_id={id} votes={article.votes} />
-            <p className={styles.articleCardCommentCount}>Comments: {article.comment_count}</p>
-            <ArticleComments article_id={article.article_id} />
+            <Link to={`/articles/${article.article_id}/comments`} ><p className={styles.articleCardCommentCount}>Comments: {article.comment_count}</p></Link>
 
           </div>}
 
