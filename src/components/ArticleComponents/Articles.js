@@ -25,15 +25,13 @@ class Articles extends Component {
     );
   }
   componentDidMount = () => {
-    if (this.props.topic) {
-      this.fetchArticleData({ topic: this.props.topic })
-    }
-    else this.fetchArticleData()
+
+    this.fetchArticleData()
   }
 
-  fetchArticleData = (topic, query) => {
+  fetchArticleData = (query) => {
     console.log(query)
-    api.getArticles(topic, query).then((articles) => {
+    api.getArticles(query).then((articles) => {
       this.setState({ articles, isLoading: false })
     })
 
