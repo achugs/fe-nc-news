@@ -1,22 +1,120 @@
 .navBar{
   padding: 1em;
   margin:0;
-  border: 1px solid fuchsia;
-  background-color: #ffb975;
+  background-color:#617B30;
+  display:flex;
+  justify-content: space-evenly;
+  height: 50px;
+  font-family: 'Press Start 2P', cursive;
+  color: #0e3746,  #0e3746;
+  
 }
 
 .homeLink{
-  border: 1px solid red;
+  border: 1px solid #0e3746;
+  padding-top: 10px;
+  padding-right: 2.5px;
+  padding-left: 2.5px;
+  background-color:  #d4d7db;
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+  border-radius: 10px;
+  color: #0e3746;
+}
+.homeLink:hover{
+  border: 1px solid #0e3746;
+  padding-top: 10px;
+  padding-right: 2.5px;
+  padding-left: 2.5px;
+  background-color:  #d4d7db;
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+  border-radius: 10px;
+  color: #617B30;
 }
 
+
 .footballLink{
-  border: 1px solid red;
+  border: 1px solid #0e3746;
+  padding-top: 10px;
+  padding-right: 2.5px;
+  padding-left: 2.5px;
+  background-color:  #d4d7db;
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+  border-radius: 10px;
+  color: #0e3746;
+}
+.footballLink:hover{
+  border: 1px solid #0e3746;
+  padding-top: 10px;
+  padding-right: 2.5px;
+  padding-left: 2.5px;
+  background-color:  #d4d7db;
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+  border-radius: 10px;
+  color: #617B30;
 }
 
 .codingLink{
-  border: 1px solid red;
+  border: 1px solid #0e3746;
+  padding-top: 10px;
+  padding-right: 2.5px;
+  padding-left: 2.5px;
+  background-color:  #d4d7db;
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+  border-radius: 10px;
+  color: #0e3746;
+}
+.codingLink:hover{
+  border: 1px solid #0e3746;
+  padding-top: 10px;
+  padding-right: 2.5px;
+  padding-left: 2.5px;
+  background-color:  #d4d7db;
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+  border-radius: 10px;
+  color: #617B30;
 }
 
 .cookingLink{
-  border: 1px solid red;
+  border: 1px solid #0e3746;
+  padding-top: 10px;
+  padding-right: 2.5px;
+  padding-left: 2.5px;
+  background-color:  #d4d7db;
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+  border-radius: 10px;
+  color: #0e3746;
+}
+.cookingLink:hover{
+  border: 1px solid #0e3746;
+  padding-top: 10px;
+  padding-right: 2.5px;
+  padding-left: 2.5px;
+  background-color:  #d4d7db;
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+  border-radius: 10px;
+  color: #617B30;
+}
+
+.welcomeUser{
+  border: 1px solid #0e3746;
+  background-color: #d4d7db;
+  font-size: 8px;
+  padding:0;
+  margin:0;
+  padding-top: 15px;
+  padding-right: 2.5px;
+  padding-left: 2.5px;
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+  border-radius: 10px;
+  color: #0e3746;
+ 
 }

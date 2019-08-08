@@ -1,15 +1,13 @@
 .headerTitle{
-  font-family: Arial, Helvetica, sans-serif;
-  border: 1px solid red;
+  font-family: 'Press Start 2P', cursive;
+  color: #f4f2ec
 }
 
-.userLogin{
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid red;
-}
 
 .header{
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid lime;
+    background-color:#0e3746;
+    height: 90px;
+    display: flex;
+    justify-content: center;
   
 }

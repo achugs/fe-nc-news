@@ -9,7 +9,6 @@ const Header = () => {
       <h1 className={styles.headerTitle}>
         NC Hughes News
       </h1>
-
     </header>
   );
 }
