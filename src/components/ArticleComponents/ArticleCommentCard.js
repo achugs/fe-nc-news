@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentVoting from './CommentVoting';
+import DeleteComment from './DeleteComment';
 
 const ArticleCommentCard = (props) => {
   console.log(props.comments)
@@ -13,6 +14,7 @@ const ArticleCommentCard = (props) => {
             <p>{comment.author}</p>
             <p>{comment.created_at.slice(0, 16)}</p>
             <CommentVoting comment_id={comment.comment_id} votes={comment.votes} />
+            <DeleteComment comment_id={comment.comment_id} />
           </li>
         );
       })}

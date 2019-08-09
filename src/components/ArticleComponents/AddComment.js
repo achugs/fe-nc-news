@@ -13,6 +13,8 @@ class AddComment extends Component {
         <form onSubmit={this.handleSubmit}>
           <textarea
             value={comment}
+            rows='6'
+            cols='35'
             onChange={this.handleChange}
             placeholder="Comment here!"
             required
