@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import * as api from '../../API/api';
 import ArticleCommentCard from './ArticleCommentCard';
 import Loading from '../../Loading';
+import AddComment from './AddComment';
 
 
 class ArticleComments extends Component {
@@ -12,9 +13,15 @@ class ArticleComments extends Component {
 
 
   render() {
-    console.log(this.state.comments)
+    console.log(this.props.username, 'acprops')
+    const { username, article_id } = this.props;
     return (
       <div>
+        <AddComment
+          username={username}
+          article_id={article_id}
+          addComment={this.addComment}
+        />
         <h3>Comments</h3>
         {this.state.isLoading ? <Loading /> : <ArticleCommentCard comments={this.state.comments} />}
 
@@ -23,13 +30,19 @@ class ArticleComments extends Component {
     );
   }
   componentDidMount() {
-
     this.fetchCommentData()
   }
+
   fetchCommentData = () => {
-    console.log(this.props.article_id)
     api.getCommentsData(this.props.article_id).then((comments) => { this.setState({ comments, isLoading: false }) })
   }
+
+  addComment = comment => {
+    this.setState(currentState => {
+      const comments = [comment, ...currentState.comments];
+      return { comments };
+    });
+  };
 }
 
 export default ArticleComments;

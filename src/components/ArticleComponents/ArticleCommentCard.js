@@ -13,7 +13,6 @@ const ArticleCommentCard = (props) => {
             <p>{comment.author}</p>
             <p>{comment.created_at.slice(0, 16)}</p>
             <CommentVoting comment_id={comment.comment_id} votes={comment.votes} />
-            <p>here</p>
           </li>
         );
       })}

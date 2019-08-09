@@ -19,7 +19,7 @@ class Articles extends Component {
         <h2 className={styles.articlesTitle}>Articles</h2>
         <SortArticles fetchArticleData={this.fetchArticleData} />
 
-        {this.state.isLoading ? <Loading /> : <ArticleList articles={this.state.articles} />}
+        {this.state.isLoading ? <Loading /> : <ArticleList articles={this.state.articles} username={this.props.username} />}
 
       </div>
     );
@@ -44,7 +44,6 @@ class Articles extends Component {
   componentDidUpdate = (prevProps, prevState) => {
 
     if (prevProps !== this.props) {
-      console.log({ topic: this.props.topic.topic })
       this.fetchArticleData({ topic: this.props.topic });
     }
   };

@@ -13,19 +13,19 @@ import ArticleComments from './components/ArticleComponents/ArticleComments';
 
 class App extends React.Component {
   state = {
-    user: { username: "jessjelly" }
+    username: "jessjelly"
   }
 
   render() {
-    const { username } = this.state.user
+    const { username } = this.state
     return (
       <div className="App" >
         <Header />
-        <NavBar user={username} />
+        <NavBar username={username} />
         {<Router>
           < Home path="/" />
           < Articles path="/articles" />
-          < ArticleCard path="/articles/:id" />
+          < ArticleCard path="/articles/:id" username={username} />
           < ErrorHandlingDisplay default status='404' msg='page not found' />
           < ArticleComments path="/articles/:id" />
           < Articles path="/topics/:topic" />

@@ -30,7 +30,7 @@ class ArticleCard extends Component {
             <p>Created: {article.created_at.slice(0, 16)}</p>
             <Voting article_id={id} votes={article.votes} />
             <p className={styles.articleCardCommentCount}>Comments: {article.comment_count}</p>
-            <ArticleComments article_id={article.article_id} />
+            <ArticleComments article_id={article.article_id} username={this.props.username} />
 
           </div>}
 
@@ -42,9 +42,7 @@ class ArticleCard extends Component {
     this.fetchArticleCard()
   }
   fetchArticleCard = () => {
-    console.log(this.props)
     api.getArticleCard(this.props.id).then((article) => { this.setState({ article, isLoading: false }) }).catch((err) => {
-      console.dir(err)
       this.setState({ error: { msg: err.response.data.msg, status: err.response.status }, isLoading: false })
     })
   }

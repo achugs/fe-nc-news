@@ -27,3 +27,10 @@ export const patchCommentVotes = async (comment_id, inc_votes) => {
   const { data } = await request.patch(`/comments/${comment_id}`, { inc_votes })
   return data.comment;
 }
+
+
+
+export const postComment = async ({ article_id, body, username }) => {
+  const { data } = await request.post(`articles/${article_id}/comments`, { body, username });
+  return data.comment;
+};

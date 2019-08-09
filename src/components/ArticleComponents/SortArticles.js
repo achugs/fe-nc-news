@@ -25,7 +25,6 @@ class SortArticles extends Component {
     );
   }
   handleChangeSort = (e) => {
-    console.log(e.target.value)
     this.setState({ sort_by: e.target.value })
   }
   handleChangeOrder = (e) => {
