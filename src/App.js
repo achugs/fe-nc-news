@@ -20,8 +20,8 @@ class App extends React.Component {
     const { username } = this.state
     return (
       <div className="App" >
-        <Header />
-        <NavBar username={username} />
+        <Header username={username} />
+        <NavBar />
         {<Router>
           < Home path="/" />
           < Articles path="/articles" />
