@@ -38,6 +38,9 @@ class Articles extends Component {
     })
 
   }
+
+
+
   componentDidUpdate = (prevProps, prevState) => {
 
     if (prevProps !== this.props) {
