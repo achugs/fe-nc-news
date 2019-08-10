@@ -1,10 +1,8 @@
 import React from 'react';
 import CommentVoting from './CommentVoting';
-import DeleteComment from './DeleteComment';
+
 
 const ArticleCommentCard = (props) => {
-  console.log(props.comments)
-
   return (
     <ul>
       {props.comments.map(comment => {
@@ -12,9 +10,10 @@ const ArticleCommentCard = (props) => {
           <li key={comment.comment_id}>
             <p>{comment.body}</p>
             <p>{comment.author}</p>
-            <p>{comment.created_at.slice(0, 16)}</p>
+            <p>{new Date(comment.created_at).toLocaleString()}</p>
             <CommentVoting comment_id={comment.comment_id} votes={comment.votes} />
-            <DeleteComment comment_id={comment.comment_id} />
+            {(props.username === comment.author ?
+              <button onClick={() => props.handleDelete(comment.comment_id)}>Delete Comment</button> : '')}
           </li>
         );
       })}

@@ -13,7 +13,6 @@ class SortArticles extends Component {
           <select value={sort_by} onChange={this.handleChangeSort}>
             <option value={"created_at"}>created_at</option>
             <option value={"votes"}>votes</option>
-            <option value={"topic"}>topic</option>
             <option value={"comment_count"}>comments</option>
           </select>
           <select value={order} onChange={this.handleChangeOrder}>

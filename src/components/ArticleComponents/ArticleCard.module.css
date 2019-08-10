@@ -1,9 +1,12 @@
 .articleCard{
+  margin:0;
   border: 1px solid aqua;
+  width: 100%;
 }
 
 .articleCardTitle{
-   border: 1px solid red;
+   font-family: 'Press Start 2P', cursive;
+   font-size: 70%;
 }
 
 .articleCardCommentCount{
@@ -12,4 +15,5 @@
 
 .articleCardBody{
   border: 1px solid red;
+  padding:5px;
 }

@@ -27,7 +27,7 @@ class ArticleCard extends Component {
             <h4>Topic: {article.topic}</h4>
             <p className={styles.articleCardBody}>{article.body}</p>
             <p>Posted by: {article.author}</p>
-            <p>Created: {article.created_at.slice(0, 16)}</p>
+            <p>Created: {new Date(article.created_at).toLocaleString()}</p>
             <Voting article_id={id} votes={article.votes} />
             <p className={styles.articleCardCommentCount}>Comments: {article.comment_count}</p>
             <ArticleComments article_id={article.article_id} username={this.props.username} />

@@ -14,6 +14,7 @@ class ArticleComments extends Component {
 
   render() {
     console.log(this.props.username, 'acprops')
+    const { comments } = this.state;
     const { username, article_id } = this.props;
     return (
       <div>
@@ -23,7 +24,7 @@ class ArticleComments extends Component {
           addComment={this.addComment}
         />
         <h3>Comments</h3>
-        {this.state.isLoading ? <Loading /> : <ArticleCommentCard comments={this.state.comments} />}
+        {this.state.isLoading ? <Loading /> : <ArticleCommentCard comments={comments} handleDelete={this.handleDelete} username={username} />}
 
 
       </div>
@@ -42,6 +43,10 @@ class ArticleComments extends Component {
       const comments = [comment, ...currentState.comments];
       return { comments };
     });
+  };
+  handleDelete = (comment_id) => {
+    api.deleteCommentById(comment_id)
+    this.setState({ comments: this.state.comments.filter(comment => comment.comment_id !== comment_id) })
   };
 }
 
