@@ -16,11 +16,12 @@
   display:flex;
   font-size: 150%;
   font-family: 'Press Start 2P', cursive;
-  color: #f4f2ec
+  color: #f4f2ec;
 }
 
 
 .welcomeUser{
-font-family: 'Press Start 2P', cursive;
- font-size: 20%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20%;
+  color: #f4f2ec;
 }

@@ -15,9 +15,9 @@ class Articles extends Component {
   render() {
     return (
 
-      <div>
+      <div className={styles.articles}>
         <h2 className={styles.articlesTitle}>Articles</h2>
-        <SortArticles fetchArticleData={this.fetchArticleData} />
+        <SortArticles className={styles.sortArticles} fetchArticleData={this.fetchArticleData} />
 
         {this.state.isLoading ? <Loading /> : <ArticleList articles={this.state.articles} username={this.props.username} />}
 
@@ -30,10 +30,7 @@ class Articles extends Component {
   }
 
   fetchArticleData = (query) => {
-    console.log(query)
     api.getArticles(query).then((articles) => {
-      console.log({ articles })
-
       this.setState({ articles, isLoading: false })
     })
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './SortArticles.module.css';
 
 class SortArticles extends Component {
   state = {
@@ -8,7 +9,7 @@ class SortArticles extends Component {
   render() {
     const { sort_by, order } = this.state;
     return (
-      <form>
+      <form className={styles.sortBy}>
         <label>
           <select value={sort_by} onChange={this.handleChangeSort}>
             <option value={"created_at"}>created_at</option>

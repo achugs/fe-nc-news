@@ -3,7 +3,24 @@
   justify-content: center;
   text-align: center;
   font-family: 'Press Start 2P', cursive;
-  color: #0e3746;
+ 
 
 
+}
+
+.articles{
+  align-content: center;
+}
+
+
+@media (max-width: 600px) {
+    
+    .articlesTitle {
+        font-size:4vw
+    }
+    .articles {
+        padding: 1rem 1rem;
+        margin-top: 10px;
+        
+    }
 }
