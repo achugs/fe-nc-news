@@ -1,11 +1,13 @@
 @media (max-width: 600px) {
-    .addComment textarea {
+    .addComment textarea{
       font-size: 3.5vw;
       margin: 0 auto; 
       width: 40vw;
       height:30vw;
       font-size: 2vw;
       padding: 12px 20px;
+      background-color: #f4f2ec;
+      font-family: 'Press Start 2P', cursive;
     }
 
     

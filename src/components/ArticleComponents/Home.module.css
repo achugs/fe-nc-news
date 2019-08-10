@@ -1,0 +1,74 @@
+.articleHome{
+  font-family: 'Press Start 2P', cursive;
+  color: black;
+  margin: 2rem;
+}
+
+.topics{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 5vw;
+}
+
+.articleTopics{
+  display:flex;
+  justify-content: space-evenly;
+  margin: 1rem;
+  font-size: 2vw;
+  
+}
+
+.footballLink{
+  
+  color: black;
+  border: 1px solid #0e3746;
+  padding: 0.5rem;
+  background-color:  #d4d7db;
+  border-radius: 10px;
+  text-decoration: none;
+  height: 9rem;
+  line-height: 9rem;
+  margin: 1rem;
+  
+}
+.footballLink:hover{ 
+  color: #617B30;
+}
+
+.codingLink{
+  color: black;
+  border: 1px solid #0e3746;
+  padding: 0.5rem;
+  background-color:  #d4d7db;
+  border-radius: 10px;
+  text-decoration: none;
+  height: 9rem;
+  line-height: 9rem;
+  margin: 1rem;
+}
+.codingLink:hover{
+  color: #617B30;
+}
+
+.cookingLink{
+  color: black;
+  border: 1px solid #0e3746;
+  padding: 0.5rem;
+  background-color:  #d4d7db;
+  border-radius: 10px;
+  text-decoration: none;
+  height: 9rem;
+  line-height: 9rem;
+  margin: 1rem;
+}
+.cookingLink:hover{
+  color: #617B30;
+}
+
+@media screen{
+  .articleTopics{
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -10,9 +10,8 @@ const ArticleList = (props) => {
       {props.articles.map(article => {
         return (
           <li key={article.title}   >
-            <Link to={`/articles/${article.article_id}`}><h4 >{article.title}</h4></Link>
-            <Link to={`/topics/${article.topic}`}><p>Level: {article.topic}</p></Link>
-
+            <Link to={`/articles/${article.article_id}`} className={styles.articleTitleLink}><h4 >{article.title}</h4></Link>
+            <p>Level type: {article.topic}</p>
             <p>Player: {article.author}</p>
             <p>Spawned: {new Date(article.created_at).toLocaleString()}</p>
             <p>Lives: {article.votes}</p>

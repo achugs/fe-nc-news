@@ -9,5 +9,17 @@ li{
   font-size: 1.5vw;
   width: 90vw;
   margin: 10px auto;
-  color:black;
+}
+
+p{
+font-family: 'Press Start 2P', cursive;
+color:black;
+}
+
+.articleTitleLink{
+  color: black;
+}
+
+.articleTitleLink:hover{
+  color: #617B30;
 }

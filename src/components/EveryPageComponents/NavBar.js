@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <div className={styles.navBar}>
       <Link to="/" className={styles.homeLink}>Home</Link>
-      <Link to='/articles'><button >All</button></Link>
+      <Link to='/articles' className={styles.allLink}>All</Link>
       <Link to="/topics/football" className={styles.footballLink}> Football </Link>
       <Link to="/topics/coding" className={styles.codingLink}> Coding</Link>
       <Link to="/topics/cooking" className={styles.cookingLink}> Cooking</Link>
