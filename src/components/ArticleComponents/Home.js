@@ -1,10 +1,13 @@
 import React from 'react';
-import Articles from './Articles'
+import { Link } from "@reach/router"
 
 const Home = () => {
   return (
     <div>
-      < Articles path="/articles" />
+      <h1>Topics</h1>
+      <Link to='/topics/football'>Football</Link>
+      <Link to='/topics/coding'>Coding</Link>
+      <Link to='/topics/cooking'> Cooking</Link>
     </div>
   );
 }
