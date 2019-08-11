@@ -25,7 +25,7 @@ class ArticleCard extends Component {
           <>
             <div className={styles.articleCard}>
               <h2 className={styles.articleCardTitle}>{article.title}</h2>
-              <h4>Level: {article.topic}</h4>
+              <h4>Level type: {article.topic}</h4>
               <p className={styles.articleCardBody}>{article.body}</p>
               <p>Player: {article.author}</p>
               <p>Spawned: {new Date(article.created_at).toLocaleString()}</p>

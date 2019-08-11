@@ -3,6 +3,7 @@ import * as api from '../../API/api';
 import ArticleCommentCard from './ArticleCommentCard';
 import Loading from '../../Loading';
 import AddComment from './AddComment';
+import styles from './ArticleComments.module.css';
 
 
 class ArticleComments extends Component {
@@ -13,17 +14,16 @@ class ArticleComments extends Component {
 
 
   render() {
-    console.log(this.props.username, 'acprops')
     const { comments } = this.state;
     const { username, article_id } = this.props;
     return (
-      <div>
+      <div className={styles.articleComments}>
         <AddComment
           username={username}
           article_id={article_id}
           addComment={this.addComment}
         />
-        <h3>Comments</h3>
+        <h3 className={styles.commentsTitle}>Comments</h3>
         {this.state.isLoading ? <Loading /> : <ArticleCommentCard comments={comments} handleDelete={this.handleDelete} username={username} />}
 
 

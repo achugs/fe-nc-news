@@ -1,5 +1,5 @@
 
-.header{
+header{
   display:flex;
   justify-content: center;
   text-align: center;
@@ -11,18 +11,27 @@
 }
 
 .headerTitle{
-  display:flex;
   font-size: 8vw;
   font-family: 'Press Start 2P', cursive;
   color: #f4f2ec;
-  margin:10px;
 }
 
 
 .welcomeUser{
-  display:flex;
   font-family: 'Press Start 2P', cursive;
   font-size: 2vw;
   color: #f4f2ec;
-  margin:10px;
+}
+
+@media screen and (max-width: 650px){
+    
+    header {
+      display:flex;
+      justify-content: center;
+      text-align: center;
+      
+      
+  
+        
+    }
 }

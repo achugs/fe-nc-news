@@ -1,5 +1,5 @@
 .navBar{
- font-size: 1.75vw;
+  font-size: 1.75vw;
   margin:0;
   padding-top: 2.5%;
   padding-bottom: 2.5%;
@@ -89,9 +89,9 @@
 .cookingLink:hover{
   color: #617B30;
 }
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 650px) {
   .navBar {
-   display: flex;
+    display: flex;
     justify-content: space-evenly;
     max-height: 10rem;
     

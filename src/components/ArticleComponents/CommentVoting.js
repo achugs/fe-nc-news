@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import * as api from '../../API/api';
+import styles from './Voting.module.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHeart,
+  faSkullCrossbones
+} from "@fortawesome/free-solid-svg-icons";
 
 class CommentVoting extends Component {
   state = {
@@ -9,11 +15,11 @@ class CommentVoting extends Component {
     const { votes } = this.props;
     const { voteInc } = this.state;
     return (
-      <div>
-        <button onClick={() => { this.voteUpdate(+1) }} disabled={voteInc >= 1}><span role='img' aria-label="love"> ❤️</span></button>
-        <p >Votes: {votes + voteInc}</p>
-        <button onClick={() => { this.voteUpdate(-1) }} disabled={voteInc < 0}><span role='img' aria-label="hate"> 💔</span></button>
-      </div>
+      <div className={styles.voting}>
+        <button className={styles.votesLove} onClick={() => { this.voteUpdate(+1) }} disabled={voteInc >= 1}><FontAwesomeIcon icon={faHeart} /></button>
+        <p className={styles.votesTally}>Lives: {votes + voteInc}</p>
+        <button className={styles.votesHate} onClick={() => { this.voteUpdate(-1) }} disabled={voteInc < 0}><FontAwesomeIcon icon={faSkullCrossbones} /></button>
+      </div >
     );
   }
   voteUpdate = (inc_votes) => {

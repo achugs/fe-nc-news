@@ -2,10 +2,7 @@
   display:flex;
   justify-content: center;
   text-align: center;
-  font-family: 'Press Start 2P', cursive;
- 
-
-
+  
 }
 
 .articles{
@@ -13,7 +10,7 @@
 }
 
 
-@media (max-width: 600px) {
+@media screen and (max-width: 650px){
     
     .articlesTitle {
         font-size:4vw

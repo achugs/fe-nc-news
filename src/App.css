@@ -1,7 +1,16 @@
-.App {
-  text-align: center;
+body {
   background-color:rgb(212, 205, 226);
   margin: 0;
   padding: 0px;
+  font-family: 'Press Start 2P', cursive;
+}
+@media screen and (max-width: 650px){
+  body {
+    display: flex;
+    justify-content: center;
+    max-height: 10rem;
+    
+  }
+ 
 }
 
