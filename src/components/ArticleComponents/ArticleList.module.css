@@ -1,5 +1,6 @@
 
 li{
+  text-align: center;
   border-radius:10px;
   border: 1px solid red;
   list-style: none;
@@ -18,6 +19,8 @@ color:black;
 
 .articleTitleLink{
   color: black;
+  text-decoration: none;
+  font-size: 2vw;
 }
 
 .articleTitleLink:hover{
