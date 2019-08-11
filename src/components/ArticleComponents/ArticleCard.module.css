@@ -16,6 +16,7 @@
 
 
 .articleCardCommentCount{
+  text-align: center;
   background-color: #d4d7db;
   border-radius: 10px;
   padding: 0.5rem 0.5rem;
@@ -25,4 +26,7 @@
   margin: 10px auto;
   color:black;
   
+}
+.articleCardBody{
+  line-height: 0.5rem;
 }

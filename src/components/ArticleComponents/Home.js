@@ -13,7 +13,7 @@ import {
 const Home = () => {
   return (
     <div className={styles.articleHome}>
-      <h1 className={styles.topics}>Topics</h1>
+      <h1 className={styles.topics}>Level types</h1>
       <div className={styles.articleTopics}>
         <Link to='/topics/football' className={styles.footballLink}><FontAwesomeIcon icon={faFutbol} />{"  "}Football {"  "} <FontAwesomeIcon icon={faFutbol} /></Link>
         <Link to='/topics/coding' className={styles.codingLink}>

@@ -8,18 +8,28 @@
       width: 40vw;
       height:30vw;
       font-size: 2vw;
-      padding: 12px 20px;
+      
     }
 
     
 }
+.commentAddTitle{
+  font-size: 3vw;
+   background-color: #d4d7db;
+  border-radius: 10px;
+  padding: 0.5rem 0.5rem;
+  border: 3px solid #0e3746;
+  font-size: 2vw;
+  width: 30vw;
+  margin: 10px auto;
+}
 input{
-      justify-content: center;
-      border-radius: 10px;
-      padding: 0.2rem 0.2rem;
-      font-size: 2vw;
-      width: 20vw;
-      margin: 5px auto;
-      background-color: #f4f2ec;
-      font-family: 'Press Start 2P', cursive;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 0.2rem 0.2rem;
+  font-size: 2vw;
+  width: 30vw;
+  margin: 5px auto;
+  background-color: #f4f2ec;
+  font-family: 'Press Start 2P', cursive;
     }

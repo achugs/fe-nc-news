@@ -25,13 +25,13 @@ header{
 
 @media screen and (max-width: 650px){
     
-    header {
-      display:flex;
-      justify-content: center;
-      text-align: center;
+  header {
+    display:flex;
+    justify-content: center;
+    text-align: center;
       
       
   
         
-    }
+ }
 }

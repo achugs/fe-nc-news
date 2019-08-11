@@ -7,3 +7,6 @@
   background-color: #f4f2ec;
   font-family: 'Press Start 2P', cursive;
 }
+.commentBody{
+  line-height: 0.5rem;
+}

@@ -12,11 +12,11 @@ class AddComment extends Component {
       <>
 
         <form onSubmit={this.handleSubmit} className={styles.addComment}>
-          <h3>Add a comment</h3>
+          <h3 className={styles.commentAddTitle}>Post a comment</h3>
           <textarea
             value={comment}
             rows='6'
-            cols='35'
+            cols='60'
             onChange={this.handleChange}
             placeholder="Comment here!"
             required
