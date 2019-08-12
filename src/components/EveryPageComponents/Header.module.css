@@ -21,15 +21,3 @@ header{
   color: #f4f2ec;
 }
 
-@media screen and (max-width: 650px){
-    
-  header {
-    display:flex;
-    justify-content: center;
-    text-align: center;
-      
-      
-  
-        
- }
-}

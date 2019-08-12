@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import * as api from '../../API/api';
 import styles from './AddComment.module.css';
+import ErrorHandlingDisplay from '../../ErrorHandlingDisplay';
 
 class AddComment extends Component {
   state = {
-    comment: ""
+    comment: "",
+    error: null
   };
   render() {
-    const { comment } = this.state;
+    const { comment, error } = this.state;
+    if (error) return <ErrorHandlingDisplay{...error} />
     return (
       <>
         <form onSubmit={this.handleSubmit} className={styles.addComment}>
@@ -38,13 +41,12 @@ class AddComment extends Component {
     event.preventDefault();
     const { comment } = this.state;
     const { username, article_id } = this.props;
-    console.log(this.props)
     api.postComment({ username, body: comment, article_id }).then(comment => {
-
-      console.log({ username }, 'username')
       this.props.addComment(comment);
       this.setState({ comment: "" });
-    }).catch(err => { console.dir(err) })
+    }).catch((err) => {
+      this.setState({ error: { msg: err.response.data.msg, status: err.response.status }, isLoading: false })
+    })
   };
 
 }

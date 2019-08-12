@@ -30,7 +30,6 @@ class Voting extends Component {
     );
   }
   voteUpdate = (inc_votes) => {
-    console.log(inc_votes)
     const { article_id } = this.props;
     api.patchVoteIncrement(article_id, inc_votes)
     this.setState(({ voteInc }) => ({

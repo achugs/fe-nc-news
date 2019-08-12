@@ -14,13 +14,11 @@ class ArticleCard extends Component {
     error: null
   }
   render() {
-    console.log(this.state)
     const { article, isLoading, error } = this.state;
     const { id, username } = this.props;
     if (error) return <ErrorHandlingDisplay {...error} />
     return (
       <div>
-
         {isLoading ? <Loading /> :
           <>
             <div className={styles.articleCard}>
