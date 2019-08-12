@@ -26,3 +26,14 @@ p{
 .articleTitleLink:hover{
   color: #617B30;
 }
+
+
+@media screen and (max-width: 650px) {
+    
+  li { 
+    font-size: 2vw;
+  }
+  .articleTitleLink{
+    font-size: 2.5vw;
+  }
+}

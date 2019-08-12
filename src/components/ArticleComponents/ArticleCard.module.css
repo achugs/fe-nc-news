@@ -27,3 +27,12 @@
   color:black;
   
 }
+
+@media screen and (max-width: 650px) {
+  .articleCard{
+    font-size: 2vw;
+  }
+  .articleCardCommentCount{
+    font-size: 2vw;
+  }
+}

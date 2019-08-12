@@ -9,7 +9,7 @@ const Header = (props) => {
       <h1 className={styles.headerTitle}>
         NC Hughes News
       </h1>
-      <h6 className={styles.welcomeUser}> Welcome: {props.username}</h6>
+      <p className={styles.welcomeUser}> Welcome: {props.username}</p>
     </header>
   );
 }

@@ -18,6 +18,8 @@ class SortArticles extends Component {
             <option value={"votes"}>votes</option>
             <option value={"comment_count"}>comments</option>
           </select>
+        </label>
+        <label>
           <select value={order} onChange={this.handleChangeOrder}>
             <option value={"desc"}>Descending</option>
             <option value={"asc"}>Ascending</option>

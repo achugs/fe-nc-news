@@ -35,7 +35,6 @@ class Articles extends Component {
 
   fetchArticleData = (query) => {
     api.getArticles(query).then((articles) => {
-      console.log(articles)
       this.setState({ articles, isLoading: false })
     }).catch(({ response }) => {
       this.setState({ error: { msg: response.data.msg, status: response.status }, isLoading: false })
@@ -44,7 +43,7 @@ class Articles extends Component {
 
   componentDidUpdate = (prevProps, prevState) => {
     const { topic } = this.props;
-    if (prevProps.topic !== topic) {
+    if (prevProps !== this.props) {
       this.fetchArticleData({ topic: topic })
     }
   };

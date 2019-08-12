@@ -17,20 +17,22 @@ class AddComment extends Component {
       <>
         <form onSubmit={this.handleSubmit} className={styles.addComment}>
           <h3 className={styles.commentAddTitle}>Post a comment</h3>
-          <textarea
-            value={comment}
-            rows='6'
-            cols='60'
-            onChange={this.handleChange}
-            placeholder="Comment here!"
-            required
-          />
-          <div>
+          <label>
+            <textarea
+              value={comment}
+              rows='6'
+              cols='60'
+              onChange={this.handleChange}
+              placeholder="Comment here!"
+              required
+            />
+          </label>
+          <label>
             <input
               type="submit"
               value="Add!"
             />
-          </div>
+          </label>
         </form>
       </>
     );
