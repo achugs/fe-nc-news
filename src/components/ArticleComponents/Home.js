@@ -8,8 +8,6 @@ import {
   faHotdog
 } from "@fortawesome/free-solid-svg-icons";
 
-
-
 const Home = () => {
   return (
     <div className={styles.articleHome}>
@@ -29,7 +27,6 @@ const Home = () => {
           {"  "} Cooking {"  "}
           <FontAwesomeIcon icon={faHotdog} /></Link>
       </div>
-
     </div>
   );
 }

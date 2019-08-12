@@ -9,25 +9,25 @@ import ErrorHandlingDisplay from '../../ErrorHandlingDisplay';
 
 
 class Articles extends Component {
+
   state = {
     articles: [],
     isLoading: true,
     error: null
   }
+
   render() {
     const { isLoading, articles, error } = this.state;
     if (error) return <ErrorHandlingDisplay {...error} />
     return (
-
       <div className={styles.articles}>
         <h2 className={styles.articlesTitle}>Articles</h2>
         <SortArticles fetchArticleData={this.fetchArticleData} />
-
         {isLoading ? <Loading /> : <ArticleList articles={articles} username={this.props.username} />}
-
       </div>
     );
   }
+
   componentDidMount = () => {
 
     this.fetchArticleData()
@@ -35,22 +35,19 @@ class Articles extends Component {
 
   fetchArticleData = (query) => {
     api.getArticles(query).then((articles) => {
+      console.log(articles)
       this.setState({ articles, isLoading: false })
     }).catch(({ response }) => {
       this.setState({ error: { msg: response.data.msg, status: response.status }, isLoading: false })
     })
-
   }
-
-
 
   componentDidUpdate = (prevProps, prevState) => {
     const { topic } = this.props;
-    if (prevProps !== this.props) {
-      this.fetchArticleData({ topic: topic });
+    if (prevProps.topic !== topic) {
+      this.fetchArticleData({ topic: topic })
     }
   };
-
 }
 
 export default Articles;

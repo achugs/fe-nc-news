@@ -16,13 +16,11 @@ const ArticleList = (props) => {
             <p>Spawned: {new Date(article.created_at).toLocaleString()}</p>
             <p>Lives: {article.votes}</p>
             <p>Comments: {article.comment_count}</p>
-
           </li>
         )
       })}
     </ div>
   );
-
 };
 
 export default ArticleList;

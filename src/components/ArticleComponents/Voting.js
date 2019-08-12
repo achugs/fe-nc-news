@@ -12,6 +12,7 @@ class Voting extends Component {
   state = {
     voteInc: 0
   }
+
   render() {
     const { votes } = this.props;
     const { voteInc } = this.state;
@@ -29,13 +30,21 @@ class Voting extends Component {
       </div >
     );
   }
-  voteUpdate = (inc_votes) => {
-    const { article_id } = this.props;
-    api.patchVoteIncrement(article_id, inc_votes)
-    this.setState(({ voteInc }) => ({
-      voteInc: voteInc + inc_votes
-    }))
 
+  voteUpdate = (inc_votes) => {
+    const { article_id, comment_id } = this.props;
+    if (article_id) {
+      api.patchVoteIncrement(article_id, inc_votes)
+      this.setState(({ voteInc }) => ({
+        voteInc: voteInc + inc_votes
+      }))
+    }
+    else if (comment_id) {
+      api.patchCommentVotes(comment_id, inc_votes).catch(err => { console.dir(err) })
+      this.setState(({ voteInc }) => ({
+        voteInc: voteInc + inc_votes
+      }))
+    }
   };
 }
 

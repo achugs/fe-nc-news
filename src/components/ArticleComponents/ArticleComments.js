@@ -8,12 +8,12 @@ import ErrorHandlingDisplay from '../../ErrorHandlingDisplay';
 
 
 class ArticleComments extends Component {
+
   state = {
     comments: [],
     isLoading: true,
     error: null
   }
-
 
   render() {
     const { comments, error, isLoading } = this.state;
@@ -28,19 +28,18 @@ class ArticleComments extends Component {
         />
         <h3 className={styles.commentsTitle}>Comments</h3>
         {isLoading ? <Loading /> : <ArticleCommentCard comments={comments} handleDelete={this.handleDelete} username={username} />}
-
-
       </div>
     );
   }
+
   componentDidMount() {
     this.fetchCommentData()
-  }
+  };
 
   fetchCommentData = () => {
     const { article_id } = this.props
     api.getCommentsData(article_id).then((comments) => { this.setState({ comments, isLoading: false }) })
-  }
+  };
 
   addComment = comment => {
     this.setState(currentState => {
@@ -48,6 +47,7 @@ class ArticleComments extends Component {
       return { comments };
     });
   };
+
   handleDelete = (comment_id) => {
     const { comments } = this.state;
     api.deleteCommentById(comment_id)

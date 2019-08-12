@@ -4,10 +4,12 @@ import styles from './AddComment.module.css';
 import ErrorHandlingDisplay from '../../ErrorHandlingDisplay';
 
 class AddComment extends Component {
+
   state = {
     comment: "",
     error: null
   };
+
   render() {
     const { comment, error } = this.state;
     if (error) return <ErrorHandlingDisplay{...error} />
@@ -33,6 +35,7 @@ class AddComment extends Component {
       </>
     );
   }
+
   handleChange = ({ target }) => {
     this.setState({ comment: target.value });
   };

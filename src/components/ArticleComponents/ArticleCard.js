@@ -13,6 +13,7 @@ class ArticleCard extends Component {
     isLoading: true,
     error: null
   }
+
   render() {
     const { article, isLoading, error } = this.state;
     const { id, username } = this.props;
@@ -31,16 +32,15 @@ class ArticleCard extends Component {
             </div>
             <p className={styles.articleCardCommentCount}>Comments: {article.comment_count}</p>
             <ArticleComments article_id={article.article_id} username={username} />
-
           </>}
-
-
       </div>
     );
   }
+
   componentDidMount() {
     this.fetchArticleCard()
   }
+
   fetchArticleCard = () => {
     api.getArticleCard(this.props.id).then((article) => { this.setState({ article, isLoading: false }) }).catch((err) => {
       this.setState({ error: { msg: err.response.data.msg, status: err.response.status }, isLoading: false })
