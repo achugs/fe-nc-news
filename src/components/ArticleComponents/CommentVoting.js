@@ -23,7 +23,6 @@ class CommentVoting extends Component {
     );
   }
   voteUpdate = (inc_votes) => {
-    console.log(inc_votes)
     const { comment_id } = this.props;
     api.patchCommentVotes(comment_id, inc_votes).catch(err => { console.dir(err) })
     this.setState(({ voteInc }) => ({

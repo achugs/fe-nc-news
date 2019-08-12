@@ -10,6 +10,10 @@ Clone the git repo
 git clone https://github.com/achugs/fe-nc-news 
 cd fe-nc-news
 ```
+#### Prerequisites
+
+[node](https://nodejs.org/en/)
+[npm 6.9.0](https://www.npmjs.com/package/npm/v/6.9.0)
 
 #### Dependencies
 
