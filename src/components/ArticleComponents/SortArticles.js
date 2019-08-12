@@ -12,14 +12,14 @@ class SortArticles extends Component {
     const { sort_by, order } = this.state;
     return (
       <form className={styles.sortBy}>
-        <label>
+        <label for="sort by order">
           <select value={sort_by} onChange={this.handleChangeSort}>
             <option value={"created_at"}>created_at</option>
             <option value={"votes"}>votes</option>
             <option value={"comment_count"}>comments</option>
           </select>
         </label>
-        <label>
+        <label for="sort by order">
           <select value={order} onChange={this.handleChangeOrder}>
             <option id="descending" type="text" name="descending" value={"desc"}>Descending</option>
             <option id="descending" type="text" name="descending" value={"asc"}>Ascending</option>
