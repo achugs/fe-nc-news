@@ -18,13 +18,13 @@ class Voting extends Component {
     const { voteInc } = this.state;
     return (
       <div className={styles.voting}>
-        <button className={styles.votesLove} onClick={() => { this.voteUpdate(+1) }} disabled={voteInc >= 1}>
+        <button id="buttonTitle" title="Love" className={styles.votesLove} onClick={() => { this.voteUpdate(+1) }} disabled={voteInc >= 1}>
           <FontAwesomeIcon icon={faHeart} />
         </button>
         <p className={styles.votesTally}>
           Lives: {votes + voteInc}
         </p>
-        <button className={styles.votesHate} onClick={() => { this.voteUpdate(-1) }} disabled={voteInc < 0}>
+        <button id="buttonTitle" title="Hate" className={styles.votesHate} onClick={() => { this.voteUpdate(-1) }} disabled={voteInc < 0}>
           <FontAwesomeIcon icon={faSkullCrossbones} />
         </button>
       </div >

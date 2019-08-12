@@ -16,8 +16,7 @@ class AddComment extends Component {
     return (
       <>
         <form onSubmit={this.handleSubmit} className={styles.addComment}>
-          <h3 className={styles.commentAddTitle}>Post a comment</h3>
-          <label>
+          <div>
             <textarea
               value={comment}
               rows='6'
@@ -26,13 +25,11 @@ class AddComment extends Component {
               placeholder="Comment here!"
               required
             />
-          </label>
-          <label>
             <input
               type="submit"
               value="Add!"
             />
-          </label>
+          </div>
         </form>
       </>
     );

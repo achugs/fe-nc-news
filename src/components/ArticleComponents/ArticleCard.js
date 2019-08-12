@@ -23,8 +23,8 @@ class ArticleCard extends Component {
         {isLoading ? <Loading /> :
           <>
             <div className={styles.articleCard}>
-              <h2>{article.title}</h2>
-              <h4>Level type: {article.topic}</h4>
+              <h1>{article.title}</h1>
+              <h2>Level type: {article.topic}</h2>
               <p>{article.body}</p>
               <p>Player: {article.author}</p>
               <p>Spawned: {new Date(article.created_at).toLocaleString()}</p>
