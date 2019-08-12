@@ -22,7 +22,7 @@ class SortArticles extends Component {
         <label for="sort by order">
           <select value={order} onChange={this.handleChangeOrder}>
             <option id="descending" type="text" name="descending" value={"desc"}>Descending</option>
-            <option id="descending" type="text" name="descending" value={"asc"}>Ascending</option>
+            <option id="ascending" type="text" name="ascending" value={"asc"}>Ascending</option>
           </select>
         </label>
       </form>
