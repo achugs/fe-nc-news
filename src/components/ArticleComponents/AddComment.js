@@ -19,8 +19,6 @@ class AddComment extends Component {
           <div>
             <textarea
               value={comment}
-              rows='6'
-              cols='60'
               onChange={this.handleChange}
               placeholder="Comment here!"
               required
