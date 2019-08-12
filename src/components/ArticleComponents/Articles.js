@@ -4,22 +4,26 @@ import * as api from '../../API/api';
 import SortArticles from './SortArticles';
 import Loading from '../../Loading';
 import styles from './Articles.module.css';
+import ErrorHandlingDisplay from '../../ErrorHandlingDisplay';
 
 
 
 class Articles extends Component {
   state = {
     articles: [],
-    isLoading: true
+    isLoading: true,
+    error: null
   }
   render() {
+    const { isLoading, articles, error } = this.state;
+    if (error) return <ErrorHandlingDisplay {...error} />
     return (
 
       <div className={styles.articles}>
         <h2 className={styles.articlesTitle}>Articles</h2>
-        <SortArticles className={styles.sortArticles} fetchArticleData={this.fetchArticleData} />
+        <SortArticles fetchArticleData={this.fetchArticleData} />
 
-        {this.state.isLoading ? <Loading /> : <ArticleList articles={this.state.articles} username={this.props.username} />}
+        {isLoading ? <Loading /> : <ArticleList articles={articles} username={this.props.username} />}
 
       </div>
     );
@@ -32,6 +36,8 @@ class Articles extends Component {
   fetchArticleData = (query) => {
     api.getArticles(query).then((articles) => {
       this.setState({ articles, isLoading: false })
+    }).catch(({ response }) => {
+      this.setState({ error: { msg: response.data.msg, status: response.status }, isLoading: false })
     })
 
   }
@@ -39,9 +45,9 @@ class Articles extends Component {
 
 
   componentDidUpdate = (prevProps, prevState) => {
-
+    const { topic } = this.props;
     if (prevProps !== this.props) {
-      this.fetchArticleData({ topic: this.props.topic });
+      this.fetchArticleData({ topic: topic });
     }
   };
 

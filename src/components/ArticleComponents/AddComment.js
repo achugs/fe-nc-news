@@ -10,7 +10,6 @@ class AddComment extends Component {
     const { comment } = this.state;
     return (
       <>
-
         <form onSubmit={this.handleSubmit} className={styles.addComment}>
           <h3 className={styles.commentAddTitle}>Post a comment</h3>
           <textarea
@@ -31,8 +30,8 @@ class AddComment extends Component {
       </>
     );
   }
-  handleChange = (event) => {
-    this.setState({ comment: event.target.value });
+  handleChange = ({ target }) => {
+    this.setState({ comment: target.value });
   };
 
   handleSubmit = event => {

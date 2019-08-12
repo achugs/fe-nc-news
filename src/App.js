@@ -19,7 +19,7 @@ class App extends React.Component {
   render() {
     const { username } = this.state
     return (
-      <div className="App" >
+      <div  >
         <Header username={username} />
         <NavBar />
         {<Router>

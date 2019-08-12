@@ -15,12 +15,19 @@ const Home = () => {
     <div className={styles.articleHome}>
       <h1 className={styles.topics}>Level types</h1>
       <div className={styles.articleTopics}>
-        <Link to='/topics/football' className={styles.footballLink}><FontAwesomeIcon icon={faFutbol} />{"  "}Football {"  "} <FontAwesomeIcon icon={faFutbol} /></Link>
+        <Link to='/topics/football' className={styles.footballLink}>
+          <FontAwesomeIcon icon={faFutbol} />
+          {"  "}Football {"  "}
+          <FontAwesomeIcon icon={faFutbol} /></Link>
         <Link to='/topics/coding' className={styles.codingLink}>
-          <FontAwesomeIcon icon={faLaptopCode} /> {"  "}
-          Coding{"  "} <FontAwesomeIcon icon={faLaptopCode} />
+          <FontAwesomeIcon icon={faLaptopCode} />
+          {"  "}Coding{"  "}
+          <FontAwesomeIcon icon={faLaptopCode} />
         </Link>
-        <Link to='/topics/cooking' className={styles.cookingLink}><FontAwesomeIcon icon={faHotdog} />{"  "} Cooking {"  "}<FontAwesomeIcon icon={faHotdog} /></Link>
+        <Link to='/topics/cooking' className={styles.cookingLink}>
+          <FontAwesomeIcon icon={faHotdog} />
+          {"  "} Cooking {"  "}
+          <FontAwesomeIcon icon={faHotdog} /></Link>
       </div>
 
     </div>

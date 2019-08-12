@@ -16,7 +16,7 @@ class ArticleCard extends Component {
   render() {
     console.log(this.state)
     const { article, isLoading, error } = this.state;
-    const { id } = this.props;
+    const { id, username } = this.props;
     if (error) return <ErrorHandlingDisplay {...error} />
     return (
       <div>
@@ -24,15 +24,15 @@ class ArticleCard extends Component {
         {isLoading ? <Loading /> :
           <>
             <div className={styles.articleCard}>
-              <h2 className={styles.articleCardTitle}>{article.title}</h2>
+              <h2>{article.title}</h2>
               <h4>Level type: {article.topic}</h4>
-              <p className={styles.articleCardBody}>{article.body}</p>
+              <p>{article.body}</p>
               <p>Player: {article.author}</p>
               <p>Spawned: {new Date(article.created_at).toLocaleString()}</p>
               <Voting article_id={id} votes={article.votes} />
             </div>
             <p className={styles.articleCardCommentCount}>Comments: {article.comment_count}</p>
-            <ArticleComments article_id={article.article_id} username={this.props.username} />
+            <ArticleComments article_id={article.article_id} username={username} />
 
           </>}
 

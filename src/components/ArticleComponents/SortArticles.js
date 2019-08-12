@@ -24,11 +24,11 @@ class SortArticles extends Component {
       </form>
     );
   }
-  handleChangeSort = (e) => {
-    this.setState({ sort_by: e.target.value })
+  handleChangeSort = ({ target }) => {
+    this.setState({ sort_by: target.value })
   }
-  handleChangeOrder = (e) => {
-    this.setState({ order: e.target.value })
+  handleChangeOrder = ({ target }) => {
+    this.setState({ order: target.value })
   }
   componentDidUpdate = (prevProps, prevState) => {
     const { sort_by, order } = this.state;

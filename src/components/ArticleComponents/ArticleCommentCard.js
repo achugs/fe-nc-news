@@ -9,7 +9,7 @@ const ArticleCommentCard = (props) => {
       {props.comments.map(comment => {
         return (
           <li key={comment.comment_id}>
-            <p className={styles.commentBody}>{comment.body}</p>
+            <p>{comment.body}</p>
             <p>Player: {comment.author}</p>
             <p>Spawned: {new Date(comment.created_at).toLocaleString()}</p>
             <CommentVoting comment_id={comment.comment_id} votes={comment.votes} />
