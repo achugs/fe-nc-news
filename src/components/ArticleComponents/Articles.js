@@ -29,24 +29,29 @@ class Articles extends Component {
   }
 
   componentDidMount = () => {
-
-    this.fetchArticleData()
+    if (this.props.topic) {
+      this.fetchArticleData({ topic: this.props.topic });
+    }
   }
 
   fetchArticleData = (query) => {
     api.getArticles(query).then((articles) => {
-      this.setState({ articles, isLoading: false })
+      this.setState({ articles: articles, isLoading: false })
     }).catch(({ response }) => {
       this.setState({ error: { msg: response.data.msg, status: response.status }, isLoading: false })
     })
   }
 
+
   componentDidUpdate = (prevProps, prevState) => {
     const { topic } = this.props;
     if (prevProps !== this.props) {
+      console.log(topic)
       this.fetchArticleData({ topic: topic })
     }
-  };
+  }
 }
 
+
 export default Articles;
+
