@@ -14,15 +14,15 @@ class SortArticles extends Component {
       <form className={styles.sortBy}>
         <select value={sort_by} onChange={this.handleChangeSort}>
           <label for="sortBy">
-            <option value={"created_at"}>created_at</option>
-            <option value={"votes"}>votes</option>
-            <option value={"comment_count"}>comments</option>
+            <option type="text" value={"created_at"}>created_at</option>
+            <option type="text" value={"votes"}>votes</option>
+            <option type="text" value={"comment_count"}>comments</option>
           </label>
         </select>
         <select value={order} onChange={this.handleChangeOrder}>
           <label for="orderBy">
-            <option value={"desc"}>Descending</option>
-            <option value={"asc"}>Ascending</option>
+            <option type="text" value={"desc"}>Descending</option>
+            <option type="text" value={"asc"}>Ascending</option>
           </label>
         </select>
       </form>
