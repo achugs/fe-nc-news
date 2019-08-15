@@ -15,7 +15,7 @@ cd fe-nc-news
 
 - [node](https://nodejs.org/en/)
 
--[npm 6.9.0](https://www.npmjs.com/package/npm/v/6.9.0)
+- [npm 6.9.0](https://www.npmjs.com/package/npm/v/6.9.0)
 
 #### Dependencies
 
