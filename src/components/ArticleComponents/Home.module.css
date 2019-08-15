@@ -1,74 +1,71 @@
-.articleHome{
-  font-family: 'Press Start 2P', cursive;
+.articleHome {
+  font-family: "Press Start 2P", cursive;
   color: black;
   margin: 2rem;
   text-align: center;
 }
 
-.topics{
-  display:flex;
+.topics {
+  display: flex;
   justify-content: center;
   flex-direction: column;
   font-size: 4vw;
 }
 
-.articleTopics{
-  display:flex;
+.articleTopics {
+  display: flex;
   justify-content: space-evenly;
   margin: 1rem;
   font-size: 3.5vw;
-  
 }
 
-.footballLink{
-  
+.footballLink {
   color: black;
   border: 5px solid #0e3746;
   padding: 0.5rem;
-  background-color:  #d4d7db;
-  border-radius: 10px;
-  text-decoration: none;
-  height: 9rem;
-  line-height: 9rem;
-  margin: 1rem;
-  
-}
-.footballLink:hover{ 
-  color: #617B30;
-}
-
-.codingLink{
-  color: black;
-  border: 5px solid #0e3746;
-  padding: 0.5rem;
-  background-color:  #d4d7db;
+  background-color: #d4d7db;
   border-radius: 10px;
   text-decoration: none;
   height: 9rem;
   line-height: 9rem;
   margin: 1rem;
 }
-.codingLink:hover{
-  color: #617B30;
+.footballLink:hover {
+  color: #617b30;
 }
 
-.cookingLink{
+.codingLink {
   color: black;
   border: 5px solid #0e3746;
   padding: 0.5rem;
-  background-color:  #d4d7db;
+  background-color: #d4d7db;
   border-radius: 10px;
   text-decoration: none;
   height: 9rem;
   line-height: 9rem;
   margin: 1rem;
 }
-.cookingLink:hover{
-  color: #617B30;
+.codingLink:hover {
+  color: #617b30;
 }
 
-@media screen{
-  .articleTopics{
+.cookingLink {
+  color: black;
+  border: 5px solid #0e3746;
+  padding: 0.5rem;
+  background-color: #d4d7db;
+  border-radius: 10px;
+  text-decoration: none;
+  height: 9rem;
+  line-height: 9rem;
+  margin: 1rem;
+}
+.cookingLink:hover {
+  color: #617b30;
+}
+
+@media screen {
+  .articleTopics {
     display: flex;
     flex-direction: column;
   }

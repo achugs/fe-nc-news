@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRing } from "@fortawesome/free-solid-svg-icons";
-import styles from './Loading.module.css';
+import styles from "./Loading.module.css";
 
 const Loading = () => {
   return (

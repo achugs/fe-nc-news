@@ -1,11 +1,9 @@
-.articlesTitle{
-  display:flex;
+.articlesTitle {
+  display: flex;
   justify-content: center;
   flex-direction: column;
-  
-  
 }
-.commentsTitle{
+.commentsTitle {
   font-size: 3vw;
   background-color: #d4d7db;
   border-radius: 10px;
@@ -16,17 +14,12 @@
   margin: 10px auto;
 }
 
-.articleComments{
-  
-  text-align:center;
-
+.articleComments {
+  text-align: center;
 }
 
 @media screen and (max-width: 650px) {
-    
-    .articleComments {
-        
-        margin-top: 10px;
-       
-    }
+  .articleComments {
+    margin-top: 10px;
+  }
 }

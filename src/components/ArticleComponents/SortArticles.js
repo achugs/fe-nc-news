@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
-import styles from './SortArticles.module.css';
+import React, { Component } from "react";
+import styles from "./SortArticles.module.css";
 
 class SortArticles extends Component {
-
   state = {
-    sort_by: 'created_at',
-    order: 'desc'
-  }
+    sort_by: "created_at",
+    order: "desc"
+  };
 
   render() {
     const { sort_by, order } = this.state;
     return (
       <form className={styles.sortBy}>
-        <label >
+        <label>
           <select value={sort_by} onChange={this.handleChangeSort}>
             <option value={"created_at"}>created_at</option>
             <option value={"votes"}>votes</option>
@@ -30,22 +29,22 @@ class SortArticles extends Component {
   }
 
   handleChangeSort = ({ target }) => {
-    this.setState({ sort_by: target.value })
-  }
+    this.setState({ sort_by: target.value });
+  };
 
   handleChangeOrder = ({ target }) => {
-    this.setState({ order: target.value })
-  }
+    this.setState({ order: target.value });
+  };
 
   componentDidUpdate = (prevProps, prevState) => {
     const { sort_by, order } = this.state;
     if (prevState.sort_by !== sort_by) {
-      this.props.fetchArticleData({ sort_by: sort_by })
+      this.props.fetchArticleData({ sort_by: sort_by });
     }
     if (prevState.order !== order) {
-      this.props.fetchArticleData({ order: order })
+      this.props.fetchArticleData({ order: order });
     }
-  }
+  };
 }
 
 export default SortArticles;

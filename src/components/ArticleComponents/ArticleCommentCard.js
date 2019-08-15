@@ -1,9 +1,8 @@
-import React from 'react';
-import Voting from './Voting';
-import styles from './ArticleCommentCard.module.css';
+import React from "react";
+import Voting from "./Voting";
+import styles from "./ArticleCommentCard.module.css";
 
-
-const ArticleCommentCard = (props) => {
+const ArticleCommentCard = props => {
   return (
     <div>
       {props.comments.map(comment => {
@@ -13,13 +12,21 @@ const ArticleCommentCard = (props) => {
             <p>Player: {comment.author}</p>
             <p>Spawned: {new Date(comment.created_at).toLocaleString()}</p>
             <Voting comment_id={comment.comment_id} votes={comment.votes} />
-            {(props.username === comment.author ?
-              <button onClick={() => props.handleDelete(comment.comment_id)} className={styles.delete}>Delete Comment</button> : '')}
+            {props.username === comment.author ? (
+              <button
+                onClick={() => props.handleDelete(comment.comment_id)}
+                className={styles.delete}
+              >
+                Delete Comment
+              </button>
+            ) : (
+              ""
+            )}
           </li>
         );
       })}
     </div>
-  )
+  );
 };
 
 export default ArticleCommentCard;

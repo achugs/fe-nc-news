@@ -1,7 +1,6 @@
-
-li{
+li {
   text-align: center;
-  border-radius:10px;
+  border-radius: 10px;
   border: 1px solid red;
   list-style: none;
   background-color: #d4d7db;
@@ -12,28 +11,26 @@ li{
   margin: 10px auto;
 }
 
-p{
-  font-family: 'Press Start 2P', cursive;
-  color:black;
+p {
+  font-family: "Press Start 2P", cursive;
+  color: black;
 }
 
-.articleTitleLink{
+.articleTitleLink {
   color: black;
   text-decoration: none;
   font-size: 2vw;
 }
 
-.articleTitleLink:hover{
-  color: #617B30;
+.articleTitleLink:hover {
+  color: #617b30;
 }
 
-
 @media screen and (max-width: 650px) {
-    
-  li { 
+  li {
     font-size: 2vw;
   }
-  .articleTitleLink{
+  .articleTitleLink {
     font-size: 2.5vw;
   }
 }

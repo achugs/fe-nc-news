@@ -1,23 +1,18 @@
-.articlesTitle{
-  display:flex;
+.articlesTitle {
+  display: flex;
   justify-content: center;
   text-align: center;
-  
 }
 
-.articles{
+.articles {
   align-content: center;
 }
 
-
-@media screen and (max-width: 650px){
-    
-    .articlesTitle {
-      font-size:4vw
-    }
-    .articles {
-        
-      margin-top: 10px;
-        
-    }
+@media screen and (max-width: 650px) {
+  .articlesTitle {
+    font-size: 4vw;
+  }
+  .articles {
+    margin-top: 10px;
+  }
 }

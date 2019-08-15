@@ -1,19 +1,17 @@
-.votesLove{
-   font-size: 3vw;
-   background-color: #f4f2ec;
-   border-radius: 10px;
-
+.votesLove {
+  font-size: 3vw;
+  background-color: #f4f2ec;
+  border-radius: 10px;
 }
 
-.votesHate{
+.votesHate {
   font-size: 3vw;
   background-color: #f4f2ec;
   border-radius: 10px;
 }
 
 @media (max-width: 600px) {
-    .voting p {
-      font-size: 2vw;
-
-    }
+  .voting p {
+    font-size: 2vw;
+  }
 }

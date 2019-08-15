@@ -1,21 +1,20 @@
-.navBar{
+.navBar {
   display: flex;
   justify-content: space-evenly;
   font-size: 1.75vw;
-  margin:0;
+  margin: 0;
   padding-top: 2.5%;
   padding-bottom: 2.5%;
-  background-color:#617B30;
-  font-family: 'Press Start 2P', cursive;
+  background-color: #617b30;
+  font-family: "Press Start 2P", cursive;
   color: black;
-  
 }
 
-.homeLink{
+.homeLink {
   color: black;
   border: 4px solid #0e3746;
   padding: 0.5rem;
-  background-color:  #d4d7db;
+  background-color: #d4d7db;
   margin-right: 2.5px;
   margin-left: 2.5px;
   border-radius: 10px;
@@ -23,15 +22,15 @@
   height: 30px;
   line-height: 30px;
 }
-.homeLink:hover{
-  color: #617B30;
+.homeLink:hover {
+  color: #617b30;
 }
 
-.allLink{
+.allLink {
   color: black;
   border: 4px solid #0e3746;
   padding: 0.5rem;
-  background-color:  #d4d7db;
+  background-color: #d4d7db;
   margin-right: 2.5px;
   margin-left: 2.5px;
   border-radius: 10px;
@@ -39,16 +38,15 @@
   height: 30px;
   line-height: 30px;
 }
-.allLink:hover{ 
-  color: #617B30;
+.allLink:hover {
+  color: #617b30;
 }
 
-
-.footballLink{
+.footballLink {
   color: black;
   border: 4px solid #0e3746;
   padding: 0.5rem;
-  background-color:  #d4d7db;
+  background-color: #d4d7db;
   margin-right: 2.5px;
   margin-left: 2.5px;
   border-radius: 10px;
@@ -56,15 +54,15 @@
   height: 30px;
   line-height: 30px;
 }
-.footballLink:hover{ 
-  color: #617B30;
+.footballLink:hover {
+  color: #617b30;
 }
 
-.codingLink{
+.codingLink {
   color: black;
   border: 4px solid #0e3746;
   padding: 0.5rem;
-  background-color:  #d4d7db;
+  background-color: #d4d7db;
   margin-right: 2.5px;
   margin-left: 2.5px;
   border-radius: 10px;
@@ -72,15 +70,15 @@
   height: 30px;
   line-height: 30px;
 }
-.codingLink:hover{
-  color: #617B30;
+.codingLink:hover {
+  color: #617b30;
 }
 
-.cookingLink{
+.cookingLink {
   color: black;
   border: 4px solid #0e3746;
   padding: 0.5rem;
-  background-color:  #d4d7db;
+  background-color: #d4d7db;
   margin-right: 2.5px;
   margin-left: 2.5px;
   border-radius: 10px;
@@ -88,15 +86,13 @@
   height: 30px;
   line-height: 30px;
 }
-.cookingLink:hover{
-  color: #617B30;
+.cookingLink:hover {
+  color: #617b30;
 }
 @media screen and (max-width: 650px) {
   .navBar {
     display: flex;
     justify-content: space-evenly;
     max-height: 10rem;
-    
   }
- 
 }

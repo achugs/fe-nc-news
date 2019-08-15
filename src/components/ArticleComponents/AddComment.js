@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import * as api from '../../API/api';
-import styles from './AddComment.module.css';
-import ErrorHandlingDisplay from '../../ErrorHandlingDisplay';
+import React, { Component } from "react";
+import * as api from "../../API/api";
+import styles from "./AddComment.module.css";
+import ErrorHandlingDisplay from "../../ErrorHandlingDisplay";
 
 class AddComment extends Component {
-
   state = {
     comment: "",
     error: null
@@ -12,7 +11,7 @@ class AddComment extends Component {
 
   render() {
     const { comment, error } = this.state;
-    if (error) return <ErrorHandlingDisplay{...error} />
+    if (error) return <ErrorHandlingDisplay {...error} />;
     return (
       <>
         <form onSubmit={this.handleSubmit} className={styles.addComment}>
@@ -23,10 +22,7 @@ class AddComment extends Component {
               placeholder="Comment here!"
               required
             />
-            <input
-              type="submit"
-              value="Add!"
-            />
+            <input type="submit" value="Add!" />
           </div>
         </form>
       </>
@@ -41,14 +37,19 @@ class AddComment extends Component {
     event.preventDefault();
     const { comment } = this.state;
     const { username, article_id } = this.props;
-    api.postComment({ username, body: comment, article_id }).then(comment => {
-      this.props.addComment(comment);
-      this.setState({ comment: "" });
-    }).catch((err) => {
-      this.setState({ error: { msg: err.response.data.msg, status: err.response.status }, isLoading: false })
-    })
+    api
+      .postComment({ username, body: comment, article_id })
+      .then(comment => {
+        this.props.addComment(comment);
+        this.setState({ comment: "" });
+      })
+      .catch(err => {
+        this.setState({
+          error: { msg: err.response.data.msg, status: err.response.status },
+          isLoading: false
+        });
+      });
   };
-
 }
 
 export default AddComment;

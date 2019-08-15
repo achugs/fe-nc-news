@@ -1,23 +1,20 @@
-
-header{
-  display:flex;
+header {
+  display: flex;
   justify-content: center;
   text-align: center;
-  background-color:#0e3746;
-  margin:0;
-  min-height: 8vh; 
+  background-color: #0e3746;
+  margin: 0;
+  min-height: 8vh;
 }
 
-.headerTitle{
+.headerTitle {
   font-size: 6vw;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   color: #f4f2ec;
 }
 
-
-.welcomeUser{
-  font-family: 'Press Start 2P', cursive;
+.welcomeUser {
+  font-family: "Press Start 2P", cursive;
   font-size: 2vw;
   color: #f4f2ec;
 }
-
