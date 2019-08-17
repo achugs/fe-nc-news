@@ -38,10 +38,8 @@ class SortArticles extends Component {
 
   componentDidUpdate = (prevProps, prevState) => {
     const { sort_by, order } = this.state;
-    if (prevState.sort_by !== sort_by) {
-      this.props.fetchArticleData({ sort_by: sort_by });
-    } else if (prevState.order !== order) {
-      this.props.fetchArticleData({ order: order });
+    if (prevState.sort_by !== sort_by || prevState.order !== order) {
+      this.props.fetchArticleData();
     }
   };
 }
