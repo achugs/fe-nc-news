@@ -12,7 +12,7 @@ textarea {
   height: 10vh;
   background-color: #f4f2ec;
   font-family: "Press Start 2P", cursive;
-  font-size: 5vw;
+  font-size: 2vw;
 }
 
 input {
@@ -33,5 +33,12 @@ input {
     font-size: 3vw;
     margin: 0 auto;
     font-size: 2vw;
+  }
+  textarea {
+    width: 30vw;
+    height: 10vh;
+    background-color: #f4f2ec;
+    font-family: "Press Start 2P", cursive;
+    font-size: 5vw;
   }
 }
