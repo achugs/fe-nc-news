@@ -2,6 +2,12 @@
 
 FE-NC-News is the front end part of the NC-News app that emulates features of news aggregation websites (e.g Reddit).
 
+## Deployed site
+
+To view the deployed front-end site please visit the netlify link below:
+
+[https://nc-hughes-news.netlify.com/](https://nc-hughes-news.netlify.com/)
+
 ## Setting up your own repository
 
 Clone the git repo
@@ -42,12 +48,6 @@ npm start
 ```
 
 This should locally open up a live version of the site.
-
-## Deployed site
-
-To view the deployed front-end site please visit the netlify link below:
-
-[https://nc-hughes-news.netlify.com/](https://nc-hughes-news.netlify.com/)
 
 ## Back-End
 
