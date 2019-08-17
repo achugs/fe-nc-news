@@ -39,7 +39,7 @@ class Articles extends Component {
     api
       .getArticles(query)
       .then(articles => {
-        this.setState({ articles: articles, isLoading: false });
+        this.setState({ articles: articles, isLoading: false, error: null });
       })
       .catch(({ response }) => {
         this.setState({

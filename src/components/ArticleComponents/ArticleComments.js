@@ -61,11 +61,6 @@ class ArticleComments extends Component {
     api.deleteCommentById(comment_id);
     this.setState({
       comments: comments.filter(comment => comment.comment_id !== comment_id)
-    }).catch(({ response }) => {
-      this.setState({
-        error: { msg: response.data.msg, status: response.status },
-        isLoading: false
-      });
     });
   };
 }

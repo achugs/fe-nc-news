@@ -49,9 +49,7 @@ class Voting extends Component {
         voteInc: voteInc + inc_votes
       }));
     } else if (comment_id) {
-      api.patchCommentVotes(comment_id, inc_votes).catch(err => {
-        console.dir(err);
-      });
+      api.patchCommentVotes(comment_id, inc_votes);
       this.setState(({ voteInc }) => ({
         voteInc: voteInc + inc_votes
       }));
